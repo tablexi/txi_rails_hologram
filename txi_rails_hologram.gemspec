@@ -1,4 +1,4 @@
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
 require "txi_rails_hologram/version"
@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.5.1"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency "rspec-rails"
 end
