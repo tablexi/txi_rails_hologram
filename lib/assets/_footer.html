@@ -1,0 +1,72 @@
+<% client = @config['client_name'] %>
+        </div>
+        <footer class="sg--siteFooter">
+          <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a> and designed by <a href="http://www.tablexi.com/" target="_blank">Table XI</a>.</p>
+        </footer>
+      </div>
+      <div class="sg--wrapper__offCanvas">
+        <nav class="sg--navMain">
+          <% catWrappers = Array.new %>
+          <% @categories.each do |cat| %>
+            <% catWrapperName = cat[0].split(nameScope).first %>
+            <% if not catWrappers.include?(catWrapperName) %>
+              <% catWrappers.push(catWrapperName) %>
+            <% end %>
+          <% end %>
+          <ul class="sg--navMain__list">
+            <% if file_name.include?('index.html') %>
+              <li class="sg--navMain__item"><a class="is--active sg--navMain__link" href="index.html">Home</a></li>
+            <% else %>
+              <li class="sg--navMain__item"><a class="sg--navMain__link" href="index.html"><%= client %> Living Style Guide</a></li>
+            <% end %>
+          </ul>
+          <% catWrappers.each do |wrapper| %>
+            <h3 class="sg--navMain__heading"><%= wrapper %></h3>
+            <ul class="sg--navMain__list">
+            <% @categories.each do |cat| %>
+              <% if cat[0].include?(wrapper) %>
+                <% catName = cat[0].split(nameScope).last %>
+                <% if catName == title.split(nameScope).last %>
+                  <li class="sg--navMain__item"><a class="is--active sg--navMain__link" href="/<%= sgPath %>/<%= cat[1] %>"><%= catName %></a></li>
+                <% else %>
+                  <li class="sg--navMain__item"><a class="sg--navMain__link" href="/<%= sgPath %>/<%= cat[1] %>"><%= catName %></a></li>
+                <% end %>
+              <% end %>
+            <% end %>
+            </ul>
+          <% end %>
+        </nav>
+      </div>
+    </div>
+  </body>
+  <%= javascript_include_tag "application" %>
+  <!--[if (lte IE 9)]>
+    <%= javascript_include_tag "application-ltie10" %>
+  <![endif]-->
+  <script>
+    (function() {
+      var downloadJSAtOnload, preExistingOnload;
+
+      downloadJSAtOnload = function() {
+        var element;
+        element = document.createElement("script");
+        element.src = '<%= asset_path("application-defer.js") %>';
+        return document.body.appendChild(element);
+      };
+
+      if (window.addEventListener) {
+        window.addEventListener("load", downloadJSAtOnload, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onload", downloadJSAtOnload);
+      } else {
+        preExistingOnload = window.onload;
+        window.onload = function() {
+          setTimeout(downloadJSAtOnload, 0);
+          return typeof preExistingOnload === "function" ? preExistingOnload() : void 0;
+        };
+      }
+
+    }).call(this);
+  </script>
+  <%= javascript_include_tag "txi_rails_hologram/application" %>
+</html>

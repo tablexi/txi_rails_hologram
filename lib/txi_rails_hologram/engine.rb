@@ -1,4 +1,6 @@
 require "jquery-rails"
+require "hologram"
+require "txi_rails_hologram/template_variables_ext"
 
 module TxiRailsHologram
 

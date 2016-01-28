@@ -1,0 +1,32 @@
+<% nameScope = @config['name_scope'] %>
+<% sgPath = @config['styleguide_path'] %>
+<% client = @config['client_name'] %>
+<!doctype html>
+<html>
+  <head>
+    <title><%= client %> Living Styleguide: <%= title %></title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="on" http-equiv="cleartype"/>
+    <meta content="True" name="HandheldFriendly"/>
+    <meta content="320" name="MobileOptimized"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "txi_rails_hologram/application" %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application-head" %>
+  </head>
+  <body class="sg--body">
+    <div class="sg--wrapper">
+      <div class="sg--wrapper__content">
+        <header class="sg--siteHeader">
+          <button class="sg--menu"></button>
+          <button class="sg--margins">Full Width</button>
+          <h1 class="sg--siteHeader__title"><%= client %> Living Styleguide: <%= title %></h1>
+          <ul class="sg--navTarget">
+          <% @blocks.each do |b| %>
+            <li class="sg--navTarget__item"><a class="sg--navTarget__link" href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% end %>
+          </ul>
+        </header>
+        <div class="sg--content">
+
