@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     txi_rails_hologram (0.0.1)
-      rails (~> 4.2.5.1)
+      hologram (~> 1.4)
+      rails (~> 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -49,6 +50,9 @@ GEM
     erubis (2.7.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hologram (1.4.0)
+      redcarpet (>= 2.2, < 4.0)
+      rouge (>= 1.5)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
@@ -88,6 +92,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
+    redcarpet (3.3.4)
+    rouge (1.10.1)
     rspec-core (3.4.2)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
