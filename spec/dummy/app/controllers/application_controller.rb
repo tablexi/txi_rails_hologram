@@ -1,3 +1,4 @@
+# Public: The base controller for this application.
 class ApplicationController < ActionController::Base
 
   # Prevent CSRF attacks by raising an exception.

@@ -13,6 +13,7 @@ require "txi_rails_hologram"
 
 module Dummy
 
+  # A dummy Rails application, used to test the engine.
   class Application < Rails::Application
 
     # Settings in config/environments/* take precedence over those specified here.

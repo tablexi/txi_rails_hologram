@@ -4,6 +4,7 @@ require "txi_rails_hologram/template_variables_ext"
 
 module TxiRailsHologram
 
+  # A mountable Rails engine that integrates Hologram with Rails.
   class Engine < ::Rails::Engine
 
     isolate_namespace TxiRailsHologram
