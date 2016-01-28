@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+/*doc
+---
+title: Alert
+name: alert
+category: basics
+---
+```html_example
+    <div class='alert'>Hello</div>
+```
+*/
+.alert { color: red; }

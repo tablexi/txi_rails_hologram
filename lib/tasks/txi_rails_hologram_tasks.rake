@@ -1,4 +1,8 @@
-# desc "Explaining what the task does"
-# task :txi_rails_hologram do
-#   # Task goes here
-# end
+require "txi_rails_hologram/builder"
+
+desc "Explaining what the task does"
+namespace :txi_rails_hologram do
+  task build: :environment do
+    TxiRailsHologram::Builder.new.build
+  end
+end
