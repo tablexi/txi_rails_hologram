@@ -1,0 +1,22 @@
+<div class="sg--codeExample--table">
+  <table class="sg--codeTable">
+    <tbody>
+      <% examples.each do |example| %>
+        <tr>
+          <th>
+            <div class="sg--exampleOutput">
+              <%= example.rendered_example %>
+            </div>
+          </th>
+          <td>
+            <div class="sg--codeBlock">
+              <div class="sg--highlight">
+                <pre><%= example.code_example %></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
