@@ -1,0 +1,1 @@
+require "microformats_helper"

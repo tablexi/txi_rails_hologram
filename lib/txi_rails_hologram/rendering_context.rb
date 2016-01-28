@@ -2,8 +2,6 @@ module TxiRailsHologram
 
   # Public: A context for rendering HAML that knows about helpers from Rails,
   # gems and the current application.
-  #
-  # NOTE: This is totally hacked together.
   class RenderingContext
 
     # Public: Creates a new context into which we can render a chunk of HAML.
@@ -37,7 +35,7 @@ module TxiRailsHologram
     end
     private_class_method :create
 
-    # A Singleton instance of the context
+    # A Singleton instance of the context.
     def self.instance
       @instance ||= create
     end
