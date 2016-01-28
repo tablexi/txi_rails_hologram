@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = TxiRailsHologram::VERSION
   s.authors     = ["Dan Hodos"]
   s.email       = ["danhodos@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TxiRailsHologram."
-  s.description = "TODO: Description of TxiRailsHologram."
+  s.homepage    = "https://github.com/tablexi/txi_rails_hologram"
+  s.summary     = "Summary of TxiRailsHologram."
+  s.description = "Description of TxiRailsHologram."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,6 +19,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2"
   s.add_dependency "hologram", "~> 1.4"
+  s.add_dependency "haml"
+  s.add_dependency "coffee-script"
+  s.add_dependency "sass"
+  s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
