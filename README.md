@@ -34,7 +34,7 @@ This gem provides a Rails-aware [haml](http://haml.info/) renderer. This rendere
     = svg_icon(:flag)
     ```
 
-4. Render partials (or use helper methods that do, e.g. [kaminari]):
+4. Render partials (or use helper methods that do, e.g. [kaminari](https://github.com/amatsuda/kaminari)):
 
     ```haml
     -# app/views/shared/logo.html.haml
