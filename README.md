@@ -67,6 +67,8 @@ This gem provides a Rails-aware [haml](http://haml.info/) renderer. This rendere
     - `code_example_renderers`
     - `documentation_assets`
 
+3. Whenever you want to generate the styleguide, run `rake txi_rails_hologram:build` from your Rails app's root.
+
 ## Overrides
 
 If the default `_header.html` and `_footer.html` provided by this gem don't suit you, you can set `documentation_assets` in your `hologram_config.yml` to a local folder inside your Rails project. This gem will then use those files, instead of the default ones it provides.
