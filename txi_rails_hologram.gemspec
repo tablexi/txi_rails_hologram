@@ -10,11 +10,11 @@ Gem::Specification.new do |s|
   s.authors     = ["Dan Hodos"]
   s.email       = ["danhodos@gmail.com"]
   s.homepage    = "https://github.com/tablexi/txi_rails_hologram"
-  s.summary     = "Summary of TxiRailsHologram."
-  s.description = "Description of TxiRailsHologram."
+  s.summary     = "Living style guides using Hologram and Rails"
+  s.description = "Allows Rails-aware rendering in Hologram documentation, allowing the use of helpers and other Rails-related Ruby shenanigans."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.2"
