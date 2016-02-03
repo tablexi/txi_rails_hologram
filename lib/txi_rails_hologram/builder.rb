@@ -15,6 +15,8 @@ module TxiRailsHologram
         "code_example_renderers" => "#{gem_path}/lib/renderers",
         "code_example_templates" => "#{gem_path}/lib/templates",
         "documentation_assets" => "#{gem_path}/lib/assets",
+        "name_scope" => " - ",
+        "custom_extensions" => ".coffee",
       }.freeze
     end
 
