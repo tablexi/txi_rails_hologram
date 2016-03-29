@@ -1,5 +1,4 @@
 #= require "jquery"
-#= require "jquery_ujs"
 
 # Check margin setting and add class if margins are off.
 marginsOff = localStorage["margins"] == "off"
