@@ -16,7 +16,7 @@ module TxiRailsHologram
     end
 
     initializer "txi_rails_hologram.assets.precompile" do |app|
-      app.config.assets.precompile += %w(jquery.js jquery_ujs.js)
+      app.config.assets.precompile += %w(jquery.js)
     end
 
   end
