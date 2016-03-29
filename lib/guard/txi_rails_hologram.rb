@@ -12,7 +12,7 @@ module Guard
     # @return [Object] the task result
     #
     def run_all
-      system *"bundle exec rake txi_rails_hologram:build".split or throw :task_has_failed
+      system("bundle exec rake txi_rails_hologram:build") or throw :task_has_failed
     end
 
     # Default behaviour on file(s) changes that the Guard plugin watches.
