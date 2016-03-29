@@ -1,0 +1,4 @@
+guard :txi_rails_hologram, wait: 50, run_on_all: false do
+  watch(%r{app/assets/stylesheets/.*scss})
+  watch("hologram_config.yml")
+end
