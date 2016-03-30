@@ -53,23 +53,48 @@ This gem provides a Rails-aware [haml](http://haml.info/) renderer. This rendere
     = root_path
     ```
 
-## Quick Start
+## Installation
+
+### Add the gem to your app
 
 1. Add the following to your Rails application's `Gemfile`:
 
     ```ruby
-    gem "txi_rails_hologram"
+    gem "txi_rails_hologram", github: "tablexi/txi_rails_hologram"
     ```
 
-    and then run  `bundle`.
+2. If you previously had hologram installed, remove it (and `guard-hologram`) from your `Gemfile`.
+3. Run  `bundle install`.
+4. Restart your server (if you had one running)
 
-2. Add a `hologram_config.yml` to the root of your Rails app. You can see the [options available here](https://github.com/trulia/hologram#creating-a-yaml-config-file). **NOTE:** you don't need to specify any of the following, as this gem handles it for you:
+### Set up your Rails environment
 
+1. Add a `hologram_config.yml` to the root of your Rails app. You can see the [options available here](https://github.com/trulia/hologram#creating-a-yaml-config-file). **NOTE:** you don't need to specify any of the following, as this gem handles it for you:
     - `code_example_templates`
     - `code_example_renderers`
     - `documentation_assets`
+    - `name_scope`
+    - `custom_extensions`
+2. If you had previously been using hologram, you should remove these (they are now handled by this gem):
+    - `app/assets/stylesheets/application-styleguide.scss`
+    - `app/assets/javascripts/application-styleguide.js.coffee`
+    - `styleguide_assets/templates`
 
-3. Whenever you want to generate the styleguide, run `rake txi_rails_hologram:build` from your Rails app's root.
+### Add guard support (optional)
+
+In `Guardfile`, add the following (replacing any existing "hologram" block):
+
+```ruby
+guard :txi_rails_hologram, wait: 50, run_on_all: false do
+  watch(%r{app/assets/stylesheets/.*scss})
+  watch(%r{styleguide_assets/content/.*md})
+  watch("hologram_config.yml")
+end
+```
+
+## Usage
+
+Instead of using `bundle exec hologram`, you use `bundle exec rake txi_rails_hologram:build`
 
 ## Customization
 
