@@ -25,3 +25,5 @@ nav_level: all
 # If you want Hologram to exit on these warnings, set the value to 'true'
 # (Default value is 'false')
 exit_on_warnings: false
+
+styleguide_foot: styleguide/assets/_custom_foot.html.haml

@@ -1,0 +1,6 @@
+= javascript_include_tag "application-foot"
+
+/[if (lte IE 9)]
+  = javascript_include_tag "application-foot-ltie10"
+
+= javascript_include_tag "application-defer.js", async: true
